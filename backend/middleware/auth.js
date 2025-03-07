@@ -1,10 +1,11 @@
 // middleware/auth.js
 const jwt = require('jsonwebtoken');
-const config = require('../config/default');
+const config = require('../config/db');
 const User = require('../models/User');
 
 exports.protect = async (req, res, next) => {
     let token;
+
 
     // Check for token in headers
     if (
@@ -12,6 +13,7 @@ exports.protect = async (req, res, next) => {
         req.headers.authorization.startsWith('Bearer')
     ) {
         token = req.headers.authorization.split(' ')[1];
+
     }
 
     // Check if token exists
@@ -25,6 +27,7 @@ exports.protect = async (req, res, next) => {
     try {
         // Verify token
         const decoded = jwt.verify(token, config.jwtSecret);
+
 
         // Attach user to request object
         req.user = await User.findById(decoded.id);

@@ -31,6 +31,6 @@ const connectDB = async () => {
 
 // Export both config and connectDB
 module.exports = {
-    config,
+    ...config,
     connectDB
 };

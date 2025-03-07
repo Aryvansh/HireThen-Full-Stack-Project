@@ -13,6 +13,12 @@ app.use(express.json());
 // Enable CORS
 app.use(cors());
 
+app.use(cors({
+    origin: '*',  // In development, allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 // Morgan logger
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));

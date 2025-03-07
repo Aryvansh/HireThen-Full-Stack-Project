@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = require('./app');
-const { config, connectDB } = require('./config/db'); // Updated import
+const { port, connectDB } = require('./config/db'); // Updated import
 
 // Debug logs
 // console.log('MONGO_URI from process.env:', process.env.MONGO_URI);
@@ -16,8 +16,8 @@ const { config, connectDB } = require('./config/db'); // Updated import
 connectDB();
 
 // Start server
-const server = app.listen(config.port, () => {
-    console.log(`Server running on port ${config.port}`);
+const server = app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
 
 // Handle unhandled promise rejections

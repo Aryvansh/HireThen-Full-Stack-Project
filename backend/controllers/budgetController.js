@@ -147,6 +147,7 @@ exports.updateBudget = async (req, res) => {
 // @desc    Delete a budget
 // @route   DELETE /api/budgets/:id
 // @access  Private
+// backend/controllers/budgetController.js
 exports.deleteBudget = async (req, res) => {
     try {
         const budget = await Budget.findById(req.params.id);
@@ -166,14 +167,15 @@ exports.deleteBudget = async (req, res) => {
             });
         }
 
-        await budget.remove();
+        // Use deleteOne instead of remove
+        await Budget.deleteOne({ _id: budget._id });
 
         res.status(200).json({
             success: true,
             data: {}
         });
     } catch (err) {
-        console.error(err);
+
 
         // Handle invalid ObjectId
         if (err.kind === 'ObjectId') {

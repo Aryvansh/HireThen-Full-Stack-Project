@@ -44,8 +44,10 @@ UserSchema.pre('save', async function (next) {
 
 // Sign JWT and return
 UserSchema.methods.getSignedJwtToken = function () {
-    return jwt.sign({ id: this._id }, config.jwtSecret, {
-        expiresIn: config.jwtExpiration
+    const config = require('../config/default');
+    const secret = config.jwtSecret || process.env.JWT_SECRET || 'your_emergency_fallback_secret';
+    return jwt.sign({ id: this._id }, secret, {
+        expiresIn: config.jwtExpiration || '24h'
     });
 };
 
