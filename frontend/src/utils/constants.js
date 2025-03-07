@@ -1,5 +1,10 @@
 // src/utils/constants.js
 import { Platform } from 'react-native';
+import Constants from 'expo-constants';
+
+// Try to load environment variables
+// Note: For this to work with Expo, you need react-native-dotenv configured
+const API_URL_PROD = 'https://hirethen-full-stack-project-1.onrender.com/api';
 
 // Determine environment
 const getEnvironment = () => {
@@ -24,7 +29,8 @@ const getApiUrl = () => {
     } else if (environment === 'staging') {
         return 'https://staging-api.your-finance-app.com/api'; // Replace with your staging URL
     } else {
-        return 'https://api.your-finance-app.com/api'; // Replace with your production URL
+        // Production URL - your deployed Render backend
+        return API_URL_PROD;
     }
 };
 
@@ -35,6 +41,7 @@ export const TRANSACTION_TYPES = [
     { label: 'Expense', value: 'expense' }
 ];
 
+// Rest of your constants remain the same
 export const DEFAULT_CATEGORIES = {
     income: ['Salary', 'Freelance', 'Investments', 'Gifts', 'Other'],
     expense: ['Food', 'Housing', 'Transportation', 'Entertainment', 'Shopping', 'Utilities', 'Health', 'Education', 'Travel', 'Other']
