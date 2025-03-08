@@ -1,4 +1,4 @@
-// src/screens/Transaction/TransactionListScreen.js
+
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, FlatList, TouchableOpacity, SafeAreaView, RefreshControl } from 'react-native';
 import { useNavigation } from '@react-navigation/native';

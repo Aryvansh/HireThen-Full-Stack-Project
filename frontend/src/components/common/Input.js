@@ -1,4 +1,4 @@
-// src/components/common/Input.js
+
 import React from 'react';
 import { StyleSheet, View, Text, TextInput } from 'react-native';
 import { COLORS } from '../../utils/constants';

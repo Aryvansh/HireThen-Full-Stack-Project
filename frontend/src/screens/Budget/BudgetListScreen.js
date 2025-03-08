@@ -1,4 +1,4 @@
-// src/screens/Budget/BudgetListScreen.js
+
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text, FlatList, TouchableOpacity, SafeAreaView, RefreshControl } from 'react-native';
 import { useNavigation } from '@react-navigation/native';

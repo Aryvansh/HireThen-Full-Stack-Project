@@ -1,4 +1,4 @@
-// src/components/common/Loader.js
+
 import React from 'react';
 import { StyleSheet, View, ActivityIndicator, Text } from 'react-native';
 import { COLORS } from '../../utils/constants';

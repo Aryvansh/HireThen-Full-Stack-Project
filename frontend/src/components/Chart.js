@@ -1,4 +1,4 @@
-// src/components/Chart.js
+
 import React from 'react';
 import { StyleSheet, View, Text, Dimensions } from 'react-native';
 import { BarChart, LineChart, PieChart } from 'react-native-chart-kit';

@@ -1,4 +1,4 @@
-// src/screens/Onboarding/OnboardingItem.js
+
 import React from 'react';
 import { View, Text, StyleSheet, Image, useWindowDimensions } from 'react-native';
 import { COLORS } from '../../utils/constants';

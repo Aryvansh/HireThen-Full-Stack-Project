@@ -1,4 +1,4 @@
-// src/screens/Onboarding/OnboardingScreen.js
+
 import React, { useState, useRef } from 'react';
 import { View, StyleSheet, FlatList, Animated, TouchableOpacity, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';

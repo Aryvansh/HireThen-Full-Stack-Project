@@ -1,4 +1,4 @@
-// src/components/common/Button.js
+
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text, ActivityIndicator } from 'react-native';
 import { COLORS } from '../../utils/constants';

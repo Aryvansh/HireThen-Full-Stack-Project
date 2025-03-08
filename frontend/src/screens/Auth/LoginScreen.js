@@ -1,4 +1,4 @@
-// src/screens/Auth/LoginScreen.js
+
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, ScrollView, SafeAreaView, KeyboardAvoidingView, Platform, Image } from 'react-native';
 import { useAuth } from '../../context/AuthContext';

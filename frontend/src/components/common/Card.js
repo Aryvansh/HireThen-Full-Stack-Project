@@ -1,4 +1,4 @@
-// src/components/common/Card.js
+
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { COLORS } from '../../utils/constants';

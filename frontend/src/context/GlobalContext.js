@@ -1,4 +1,4 @@
-// src/context/GlobalContext.js
+
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { useAuth } from './AuthContext';
 import * as transactionApi from '../api/transaction';
