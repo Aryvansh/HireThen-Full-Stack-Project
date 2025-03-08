@@ -123,7 +123,7 @@ finance-tracker/
 
 3. Update the API URL in `src/utils/constants.js` to point to your backend server:
    ```javascript
-   export const API_URL = 'http://your-backend-url:5000/api';
+   export const API_URL = 'http://backend-url:5000/api';
    ```
 
 4. Start the Expo development server:
@@ -180,10 +180,8 @@ The app implements a caching strategy using AsyncStorage to provide offline acce
 - Push notifications for budget alerts
 - Expense forecasting
 - Financial goal setting
-- Multi-currency support
 - Data export functionality
-- Dark mode support
-- Biometric authentication
+
 
 ## License
 This project is licensed under the MIT License.
